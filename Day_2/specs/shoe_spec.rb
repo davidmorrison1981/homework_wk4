@@ -9,33 +9,33 @@ class TestShoo < MiniTest::Test
       "first_name" =>"David", 
       "last_name"=>"Morrison", 
       "address"=>"Elliot House", 
-      "shoo_size"=>10, 
+      "size"=>10, 
       "quantity"=>2
       })
   end
 
   def test_first_name()
-    assert_equal("David", @shoe.first_name)
+    assert_equal("David", @shoo.first_name)
   end 
 
   def test_last_name()
-    assert_equal("Morrison", @shoe.last_name)
+    assert_equal("Morrison", @shoo.last_name)
   end
 
   def test_concat_name()
-    assert_equal("David Morrison", @shoe.concat_name())
+    assert_equal("David Morrison", @shoo.concat_name())
   end
 
   def test_has_address()
-    assert_equal("Elliot House", @shoe.address)
+    assert_equal("Elliot House", @shoo.address)
   end
 
   def test_has_size()
-    assert_equal(10, @shoe.size)
+    assert_equal(10, @shoo.size)
   end
 
   def test_has_quantity()
-    assert_equal(2, @shoe.quantity())
+    assert_equal(2, @shoo.quantity())
   end
 
 

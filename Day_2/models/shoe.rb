@@ -2,14 +2,14 @@ require_relative("../db/sql_runner")
 
 class Shoo
 
-  attr_reader(:first_name, :last_name, :address,:shoo_size, :quantity, :id)
+  attr_reader(:first_name, :last_name, :address,:size, :quantity, :id)
 
   def initialize(options)
     @first_name = options["first_name"]
     @last_name = options["last_name"]
     @address = options["address"]
-    @shoo_size = options["shoo_size"]
-    @quantity = options["quantity"]
+    @size = options["size"].to_i
+    @quantity = options["quantity"].to_i
     @id = options["id"].to_i
   end
 

@@ -3,6 +3,6 @@
 <% @shoos.each do |shoo| %>
 <p>Name: <%= shoo.concat_name() %></p>
 
-<p>Order:<%= shoo.quantity  %> x <%= pizza.size %></p>
+<p>Order:<%= shoo.quantity  %> x <%= shoo.size %></p>
 <hr>
 <% end %>

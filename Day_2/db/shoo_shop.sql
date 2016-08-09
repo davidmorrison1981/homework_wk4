@@ -5,6 +5,6 @@ CREATE TABLE shoos (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   address VARCHAR(255),
-  size INT2
+  size INT2,
   quantity INT2
 );
