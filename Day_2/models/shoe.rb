@@ -22,7 +22,7 @@ class Shoo
   end
 
   def save()
-    sql = "INSERT INTO shoos(
+    sql = "INSERT INTO shoos (
       first_name,
       last_name,
       address,
@@ -34,8 +34,8 @@ class Shoo
       #{@size},
       #{@quantity}
       ) RETURNING *;"
-    shoo= SqlRunner.run(sql).first
-    @id=shoo['id'].to_i
+    shoo = SqlRunner.run(sql).first
+    @id = shoo['id'].to_i
   end
 
   def self.all()
