@@ -7,30 +7,30 @@ require_relative('./models/artist')
 #index - artist
 get '/artists' do
   @artists = Artist.all()
-  erb ( :'index/artists' )
+  erb ( :'index_artists' )
 end
 
 #index - album
 get '/albums' do
   @albums = Album.all()
-  erb ( :'index/albums' )
+  erb ( :'index_albums' )
 end
 
 #new  - artist
 get '/artists/new' do 
-  erb( :'new/artist' )
+  erb( :'new_artist' )
 end
 
 #new  - album
 get '/albums/new' do 
-  erb( :'new/album' )
+  erb( :'new_album' )
 end
 
 #create - artist
 post '/artists' do 
   @artist = Artist.new( params )
   @artist.save() 
-  erb( :'create/artist' )
+  erb( :'create_artist' )
 end
 
 #create - album
@@ -55,13 +55,13 @@ end
 #edit artist
 get '/artists/:id/edit' do
   @artist = Artist.find( params[:id] )
-  erb( :'artists/edit' )
+  erb( :'artists_edit' )
 end  
 
 #edit album
 get '/albums/:id/edit' do
   @album = Album.find( params[:id] )
-  erb( :'albums/edit' )
+  erb( :'albums_edit' )
 end  
 
 #update artist
