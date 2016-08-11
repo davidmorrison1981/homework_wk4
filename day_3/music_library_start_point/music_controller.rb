@@ -55,13 +55,13 @@ end
 #edit artist
 get '/artists/:id/edit' do
   @artist = Artist.find( params[:id] )
-  erb( :'artists_edit' )
+  erb( :'artist_edit' )
 end  
 
 #edit album
 get '/albums/:id/edit' do
   @album = Album.find( params[:id] )
-  erb( :'albums_edit' )
+  erb( :'album_edit' )
 end  
 
 #update artist
